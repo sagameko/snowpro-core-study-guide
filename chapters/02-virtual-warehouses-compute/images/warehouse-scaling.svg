@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Scale up versus scale out diagram for Snowflake virtual warehouses</title>
+  <desc id="desc">Diagram contrasting scaling up, which means increasing warehouse size (T-shirt sizes from X-Small to 6X-Large) for query complexity, with scaling out, which means adding more clusters of the same size to a multi-cluster warehouse for concurrency.</desc>
+  <rect x="0" y="0" width="800" height="460" fill="#0f172a"/>
+  <text x="400" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#f8fafc">Scale Up vs. Scale Out in Snowflake</text>
+
+  <!-- Scale up column -->
+  <text x="200" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#7dd3fc">Scale UP — bigger warehouse</text>
+  <text x="200" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Fixes: slow, complex individual queries</text>
+
+  <rect x="150" y="115" width="30" height="20" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="220" y="130" font-family="Arial, sans-serif" font-size="12" fill="#e2e8f0">X-Small</text>
+
+  <rect x="150" y="150" width="55" height="20" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="220" y="165" font-family="Arial, sans-serif" font-size="12" fill="#e2e8f0">Small</text>
+
+  <rect x="150" y="185" width="90" height="25" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="255" y="202" font-family="Arial, sans-serif" font-size="12" fill="#e2e8f0">Medium</text>
+
+  <rect x="150" y="225" width="130" height="30" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="295" y="245" font-family="Arial, sans-serif" font-size="12" fill="#e2e8f0">Large</text>
+
+  <rect x="150" y="270" width="170" height="35" fill="#1e3a5f" stroke="#38bdf8"/>
+  <text x="335" y="292" font-family="Arial, sans-serif" font-size="12" fill="#e2e8f0">X-Large ... up to 6X-Large</text>
+
+  <text x="200" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#94a3b8">Doubling size roughly</text>
+  <text x="200" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#94a3b8">doubles compute nodes</text>
+  <text x="200" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#94a3b8">and credit cost/hour</text>
+
+  <!-- divider -->
+  <line x1="400" y1="70" x2="400" y2="400" stroke="#334155" stroke-width="2"/>
+
+  <!-- Scale out column -->
+  <text x="600" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#86efac">Scale OUT — multi-cluster</text>
+  <text x="600" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Fixes: queuing from too many concurrent users</text>
+
+  <rect x="450" y="120" width="90" height="45" rx="6" fill="#14532d" stroke="#4ade80"/>
+  <text x="495" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f0fdf4">Cluster 1</text>
+
+  <rect x="560" y="120" width="90" height="45" rx="6" fill="#14532d" stroke="#4ade80"/>
+  <text x="605" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f0fdf4">Cluster 2</text>
+
+  <rect x="670" y="120" width="90" height="45" rx="6" fill="#14532d" stroke="#4ade80" stroke-dasharray="4,3"/>
+  <text x="715" y="147" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f0fdf4">Cluster 3</text>
+  <text x="715" y="162" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#bbf7d0">(auto-added)</text>
+
+  <text x="600" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#e2e8f0">Same-size clusters added/removed</text>
+  <text x="600" y="213" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#e2e8f0">automatically based on queued queries</text>
+
+  <text x="600" y="255" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#94a3b8">Requires Enterprise edition</text>
+  <text x="600" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#94a3b8">or above</text>
+  <text x="600" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#94a3b8">Does not speed up a single</text>
+  <text x="600" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-style="italic" fill="#94a3b8">query — adds concurrency capacity</text>
+
+  <text x="400" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Choosing the right lever for a given performance problem is a core SnowPro Core exam skill</text>
+</svg>

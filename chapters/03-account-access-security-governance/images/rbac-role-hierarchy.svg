@@ -1,0 +1,48 @@
+<svg viewBox="0 0 800 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Snowflake system-defined role hierarchy diagram</title>
+  <desc id="desc">Diagram showing Snowflake's default role hierarchy: ACCOUNTADMIN at the top, containing SECURITYADMIN and SYSADMIN, with SECURITYADMIN containing USERADMIN, and SYSADMIN as the recommended parent for custom roles. PUBLIC sits at the base and is inherited by every role.</desc>
+  <rect x="0" y="0" width="800" height="480" fill="#0f172a"/>
+  <text x="400" y="36" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#f8fafc">Snowflake System-Defined Role Hierarchy</text>
+
+  <!-- ACCOUNTADMIN -->
+  <rect x="310" y="60" width="180" height="55" rx="8" fill="#4c1d95" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="400" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#ede9fe">ACCOUNTADMIN</text>
+  <text x="400" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#c4b5fd">Top-level; billing &amp; account</text>
+
+  <line x1="400" y1="115" x2="220" y2="165" stroke="#94a3b8" stroke-width="1.5"/>
+  <line x1="400" y1="115" x2="580" y2="165" stroke="#94a3b8" stroke-width="1.5"/>
+
+  <!-- SECURITYADMIN -->
+  <rect x="130" y="165" width="180" height="55" rx="8" fill="#1e3a5f" stroke="#7dd3fc" stroke-width="2"/>
+  <text x="220" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e0f2fe">SECURITYADMIN</text>
+  <text x="220" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7dd3fc">Manages grants &amp; roles</text>
+
+  <!-- SYSADMIN -->
+  <rect x="490" y="165" width="180" height="55" rx="8" fill="#14532d" stroke="#86efac" stroke-width="2"/>
+  <text x="580" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#f0fdf4">SYSADMIN</text>
+  <text x="580" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#86efac">Creates warehouses, DBs, objects</text>
+
+  <line x1="220" y1="220" x2="220" y2="265" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- USERADMIN -->
+  <rect x="130" y="265" width="180" height="55" rx="8" fill="#1e3a5f" stroke="#7dd3fc" stroke-width="1.5"/>
+  <text x="220" y="297" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#e0f2fe">USERADMIN</text>
+  <text x="220" y="312" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7dd3fc">Creates users &amp; roles</text>
+
+  <line x1="580" y1="220" x2="580" y2="265" stroke="#94a3b8" stroke-width="1.5"/>
+  <!-- Custom roles -->
+  <rect x="490" y="265" width="180" height="55" rx="8" fill="#14532d" stroke="#86efac" stroke-width="1.5" stroke-dasharray="5,3"/>
+  <text x="580" y="292" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f0fdf4">Custom Roles</text>
+  <text x="580" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#86efac">(e.g., ANALYST_ROLE)</text>
+
+  <text x="580" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-style="italic" fill="#94a3b8">Best practice: assign custom roles under SYSADMIN</text>
+
+  <!-- PUBLIC base -->
+  <rect x="250" y="400" width="300" height="50" rx="8" fill="#3a2412" stroke="#fdba74" stroke-width="2"/>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fed7aa">PUBLIC</text>
+  <text x="400" y="444" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fdba74">Automatically granted to every user and role</text>
+
+  <line x1="220" y1="320" x2="400" y2="400" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="580" y1="320" x2="400" y2="400" stroke="#64748b" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <text x="400" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">RBAC: privileges are granted to roles, roles are granted to users — never privileges directly to users</text>
+</svg>

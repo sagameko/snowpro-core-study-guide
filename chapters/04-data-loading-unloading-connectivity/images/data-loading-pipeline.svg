@@ -1,0 +1,54 @@
+<svg viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Snowflake data loading pipeline diagram</title>
+  <desc id="desc">Diagram showing files moving from external cloud storage or local machine into a Snowflake stage, then via COPY INTO or Snowpipe into a target table, and the reverse path for unloading via COPY INTO location.</desc>
+  <rect x="0" y="0" width="820" height="400" fill="#0f172a"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="21" font-weight="bold" fill="#f8fafc">Snowflake Data Loading &amp; Unloading Pipeline</text>
+
+  <!-- Source files -->
+  <rect x="30" y="150" width="130" height="70" rx="8" fill="#3a2412" stroke="#fdba74" stroke-width="2"/>
+  <text x="95" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fed7aa">Source Files</text>
+  <text x="95" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fdba74">S3 / Azure Blob /</text>
+  <text x="95" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fdba74">GCS / local (PUT)</text>
+
+  <!-- arrow to stage -->
+  <line x1="160" y1="185" x2="230" y2="185" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Stage -->
+  <rect x="235" y="150" width="140" height="70" rx="8" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <text x="305" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7dd3fc">Stage</text>
+  <text x="305" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">Internal (user/table/</text>
+  <text x="305" y="208" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">named) or External</text>
+
+  <!-- arrow to table via COPY INTO / Snowpipe -->
+  <line x1="375" y1="175" x2="450" y2="175" stroke="#4ade80" stroke-width="2" marker-end="url(#arrowg)"/>
+  <text x="412" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#86efac">COPY INTO</text>
+  <line x1="375" y1="200" x2="450" y2="200" stroke="#facc15" stroke-width="2" marker-end="url(#arrowy)"/>
+  <text x="412" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fde047">Snowpipe (auto)</text>
+
+  <!-- Table -->
+  <rect x="455" y="150" width="140" height="70" rx="8" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="525" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f0fdf4">Target Table</text>
+  <text x="525" y="197" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bbf7d0">Structured or</text>
+  <text x="525" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bbf7d0">semi-structured</text>
+
+  <!-- unload arrow back -->
+  <line x1="595" y1="245" x2="305" y2="245" stroke="#f472b6" stroke-width="2" marker-end="url(#arrowp)"/>
+  <text x="450" y="262" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#f9a8d4">COPY INTO &lt;location&gt; (unload)</text>
+
+  <!-- File formats box -->
+  <rect x="650" y="150" width="140" height="70" rx="8" fill="#3a1e1e" stroke="#fb7185" stroke-width="2"/>
+  <text x="720" y="176" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fecdd3">File Formats</text>
+  <text x="720" y="193" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fda4af">CSV · JSON · Parquet</text>
+  <text x="720" y="206" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#fda4af">ORC · Avro · XML</text>
+
+  <text x="410" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">PUT / GET move files between local machines and internal stages</text>
+  <text x="410" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Snowpipe uses serverless compute for continuous, event-driven micro-batch loading</text>
+  <text x="410" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">All loading/unloading paths route data through a stage before or after touching a table</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+    <marker id="arrowg" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4ade80"/></marker>
+    <marker id="arrowy" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#facc15"/></marker>
+    <marker id="arrowp" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#f472b6"/></marker>
+  </defs>
+</svg>

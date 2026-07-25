@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Snowflake three-layer architecture diagram</title>
+  <desc id="desc">Diagram showing Snowflake's three independently scaling layers: Cloud Services on top, Compute (Virtual Warehouses) in the middle, and Centralized Storage on the bottom, all running on a cloud provider.</desc>
+  <rect x="0" y="0" width="800" height="520" fill="#0f172a"/>
+
+  <text x="400" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#f8fafc">Snowflake's Three-Layer Architecture</text>
+
+  <!-- Cloud Services Layer -->
+  <rect x="80" y="70" width="640" height="110" rx="10" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <text x="400" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#7dd3fc">Layer 1: Cloud Services</text>
+  <text x="400" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#e2e8f0">Authentication &amp; RBAC · Query parsing &amp; optimization · Metadata &amp; transaction management</text>
+  <text x="400" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#e2e8f0">Infrastructure management · Security · Result cache</text>
+  <text x="400" y="166" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#94a3b8">Serverless — always on, scales automatically, no warehouse required</text>
+
+  <!-- Compute Layer -->
+  <rect x="80" y="205" width="640" height="150" rx="10" fill="#1e2e1a" stroke="#4ade80" stroke-width="2"/>
+  <text x="400" y="233" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#86efac">Layer 2: Compute (Virtual Warehouses)</text>
+  <text x="400" y="257" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#e2e8f0">Independent MPP compute clusters that execute queries</text>
+
+  <rect x="115" y="275" width="130" height="55" rx="6" fill="#14532d" stroke="#4ade80"/>
+  <text x="180" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f0fdf4">Warehouse A</text>
+  <text x="180" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#bbf7d0">X-Small</text>
+
+  <rect x="270" y="275" width="130" height="55" rx="6" fill="#14532d" stroke="#4ade80"/>
+  <text x="335" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f0fdf4">Warehouse B</text>
+  <text x="335" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#bbf7d0">Large</text>
+
+  <rect x="425" y="275" width="130" height="55" rx="6" fill="#14532d" stroke="#4ade80"/>
+  <text x="490" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f0fdf4">Warehouse C</text>
+  <text x="490" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#bbf7d0">Multi-cluster</text>
+
+  <rect x="580" y="275" width="130" height="55" rx="6" fill="#14532d" stroke="#4ade80" stroke-dasharray="4,3"/>
+  <text x="645" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#f0fdf4">Warehouse D</text>
+  <text x="645" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#bbf7d0">Suspended</text>
+
+  <text x="400" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#94a3b8">Scale up (bigger warehouse) or scale out (multi-cluster) — independently, on demand</text>
+
+  <!-- Storage Layer -->
+  <rect x="80" y="380" width="640" height="90" rx="10" fill="#3a2412" stroke="#fb923c" stroke-width="2"/>
+  <text x="400" y="408" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="bold" fill="#fdba74">Layer 3: Centralized Storage</text>
+  <text x="400" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#e2e8f0">Compressed, columnar micro-partitions in cloud object storage (S3 / Azure Blob / GCS)</text>
+  <text x="400" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#94a3b8">Shared by all warehouses — no data movement or duplication between compute clusters</text>
+
+  <text x="400" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Storage and compute scale independently — this separation is the core idea behind SnowPro Core Domain 1</text>
+</svg>

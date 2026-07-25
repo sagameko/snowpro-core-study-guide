@@ -1,0 +1,35 @@
+<svg viewBox="0 0 820 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">What's new in SnowPro Core COF-C03 diagram</title>
+  <desc id="desc">Diagram showing four content areas newly emphasized in the COF-C03 exam version compared to the retired COF-C02 version: Cortex AI functions, Apache Iceberg tables, Snowflake Notebooks, and Git integration.</desc>
+  <rect x="0" y="0" width="820" height="340" fill="#0f172a"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f8fafc">What's New in COF-C03 vs. Retired COF-C02</text>
+
+  <rect x="30" y="70" width="170" height="110" rx="10" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <text x="115" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#7dd3fc">Cortex AI</text>
+  <text x="115" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">SQL-callable LLM</text>
+  <text x="115" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">functions: summarize,</text>
+  <text x="115" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">extract, classify</text>
+
+  <rect x="220" y="70" width="170" height="110" rx="10" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="305" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#86efac">Apache Iceberg</text>
+  <text x="305" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bbf7d0">Open table format</text>
+  <text x="305" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bbf7d0">for cross-engine</text>
+  <text x="305" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bbf7d0">interoperability</text>
+
+  <rect x="410" y="70" width="170" height="110" rx="10" fill="#4c1d95" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="495" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ede9fe">Notebooks</text>
+  <text x="495" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe">Python/SQL notebooks</text>
+  <text x="495" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe">inside Snowsight for</text>
+  <text x="495" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe">data science workflows</text>
+
+  <rect x="600" y="70" width="190" height="110" rx="10" fill="#3a2412" stroke="#fdba74" stroke-width="2"/>
+  <text x="695" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#fed7aa">Git Integration</text>
+  <text x="695" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fdba74">Sync repos, branch,</text>
+  <text x="695" y="136" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fdba74">and version Snowflake</text>
+  <text x="695" y="150" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fdba74">code &amp; artifacts</text>
+
+  <text x="410" y="230" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#e2e8f0">These four areas reflect Snowflake's evolution into a broader AI and</text>
+  <text x="410" y="250" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#e2e8f0">open-format platform, and are explicitly called out by multiple COF-C03 study guides</text>
+  <text x="410" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#94a3b8">Even experienced Snowflake users may not have hands-on time with these yet — budget extra study time here</text>
+  <text x="410" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Embedded across Domain 1 (Architecture) and Domain 3 (Loading/Connectivity), not a separate scored domain</text>
+</svg>

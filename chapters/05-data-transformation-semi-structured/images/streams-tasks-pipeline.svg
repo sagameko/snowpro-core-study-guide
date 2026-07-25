@@ -1,0 +1,42 @@
+<svg viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Snowflake Streams and Tasks change data capture pipeline diagram</title>
+  <desc id="desc">Diagram showing a source table with a Stream object capturing row-level changes, feeding a Task that runs on a schedule or is chained in a DAG, writing transformed results into a target table, as an alternative to a Dynamic Table which automates the same pattern declaratively.</desc>
+  <rect x="0" y="0" width="820" height="400" fill="#0f172a"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f8fafc">Change Data Capture with Streams &amp; Tasks</text>
+
+  <rect x="30" y="140" width="150" height="70" rx="8" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="105" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f0fdf4">Source Table</text>
+  <text x="105" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bbf7d0">INSERT / UPDATE / DELETE</text>
+
+  <line x1="180" y1="175" x2="250" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#a1)"/>
+
+  <rect x="255" y="140" width="150" height="70" rx="8" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <text x="330" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#7dd3fc">Stream</text>
+  <text x="330" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">Captures row-level</text>
+  <text x="330" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">deltas (CDC)</text>
+
+  <line x1="405" y1="175" x2="475" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#a1)"/>
+
+  <rect x="480" y="140" width="150" height="70" rx="8" fill="#4c1d95" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="555" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ede9fe">Task</text>
+  <text x="555" y="186" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe">Scheduled or chained</text>
+  <text x="555" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe">in a DAG</text>
+
+  <line x1="630" y1="175" x2="700" y2="175" stroke="#94a3b8" stroke-width="2" marker-end="url(#a1)"/>
+
+  <rect x="700" y="140" width="100" height="70" rx="8" fill="#3a2412" stroke="#fdba74" stroke-width="2"/>
+  <text x="750" y="168" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fed7aa">Target</text>
+  <text x="750" y="184" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fdba74">Table</text>
+
+  <!-- Alternative: Dynamic table -->
+  <rect x="255" y="270" width="350" height="70" rx="8" fill="#3a1e1e" stroke="#fb7185" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="430" y="298" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fecdd3">Alternative: Dynamic Table</text>
+  <text x="430" y="316" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fda4af">Declarative — define target query, Snowflake</text>
+  <text x="430" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fda4af">automatically manages refresh (no manual Stream+Task)</text>
+
+  <text x="410" y="370" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Streams+Tasks = manual control · Dynamic Tables = declarative automation of the same pattern</text>
+
+  <defs>
+    <marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

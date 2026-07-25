@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Snowflake query performance levers diagram</title>
+  <desc id="desc">Diagram showing a query path checking the result cache first in Cloud Services, then the local disk warehouse cache, then falling back to remote storage scan with pruning enabled by micro-partition metadata, with clustering keys and search optimization service shown as additional levers.</desc>
+  <rect x="0" y="0" width="800" height="420" fill="#0f172a"/>
+  <text x="400" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f8fafc">Query Performance Levers: Cache, Pruning &amp; Clustering</text>
+
+  <rect x="30" y="70" width="150" height="60" rx="8" fill="#3a2412" stroke="#fdba74" stroke-width="2"/>
+  <text x="105" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fed7aa">Query Submitted</text>
+  <text x="105" y="113" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fdba74">by user/app</text>
+
+  <line x1="180" y1="100" x2="240" y2="100" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+
+  <rect x="245" y="65" width="180" height="70" rx="8" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <text x="335" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#7dd3fc">1. Result Cache</text>
+  <text x="335" y="107" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">Cloud Services · 24hr</text>
+  <text x="335" y="121" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">Exact match = instant return</text>
+
+  <line x1="335" y1="135" x2="335" y2="165" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+  <text x="360" y="152" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">miss</text>
+
+  <rect x="245" y="170" width="180" height="70" rx="8" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="335" y="195" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#f0fdf4">2. Warehouse Cache</text>
+  <text x="335" y="212" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bbf7d0">Local SSD on compute nodes</text>
+  <text x="335" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bbf7d0">Cleared on suspend</text>
+
+  <line x1="335" y1="240" x2="335" y2="270" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+  <text x="360" y="257" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">miss</text>
+
+  <rect x="245" y="275" width="180" height="80" rx="8" fill="#4c1d95" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="335" y="300" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ede9fe">3. Remote Storage Scan</text>
+  <text x="335" y="317" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe">Micro-partition metadata</text>
+  <text x="335" y="331" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe">enables pruning to skip</text>
+  <text x="335" y="345" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe">irrelevant partitions</text>
+
+  <line x1="425" y1="315" x2="500" y2="315" stroke="#94a3b8" stroke-width="2" marker-end="url(#b1)"/>
+
+  <rect x="505" y="260" width="250" height="130" rx="8" fill="#3a1e1e" stroke="#fb7185" stroke-width="2"/>
+  <text x="630" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fecdd3">Additional levers</text>
+  <text x="630" y="308" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fda4af">Clustering keys — improve</text>
+  <text x="630" y="322" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fda4af">natural pruning on large tables</text>
+  <text x="630" y="342" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fda4af">Search Optimization Service —</text>
+  <text x="630" y="356" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fda4af">speeds selective point lookups</text>
+  <text x="630" y="376" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fda4af">Materialized views — precompute</text>
+
+  <text x="400" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#64748b">Query Profile in Snowsight shows exactly which of these paths a query actually took</text>
+
+  <defs>
+    <marker id="b1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#94a3b8"/></marker>
+  </defs>
+</svg>

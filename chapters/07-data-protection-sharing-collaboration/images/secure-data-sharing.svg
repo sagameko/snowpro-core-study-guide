@@ -1,0 +1,46 @@
+<svg viewBox="0 0 820 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Snowflake secure data sharing models diagram</title>
+  <desc id="desc">Diagram comparing three Snowflake data sharing models: a direct share to an existing consumer account who pays their own compute, a reader account provided and paid for by the provider for consumers without their own Snowflake account, and a Marketplace listing for publishing data products broadly.</desc>
+  <rect x="0" y="0" width="820" height="400" fill="#0f172a"/>
+  <text x="410" y="34" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#f8fafc">Snowflake Secure Data Sharing Models</text>
+
+  <rect x="30" y="60" width="140" height="55" rx="8" fill="#3a2412" stroke="#fdba74" stroke-width="2"/>
+  <text x="100" y="92" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fed7aa">Provider Account</text>
+
+  <!-- Model 1: direct share -->
+  <line x1="170" y1="87" x2="260" y2="87" stroke="#4ade80" stroke-width="2" marker-end="url(#c1)"/>
+  <rect x="265" y="60" width="180" height="55" rx="8" fill="#14532d" stroke="#4ade80" stroke-width="2"/>
+  <text x="355" y="82" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#f0fdf4">Direct Share</text>
+  <text x="355" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bbf7d0">to existing Snowflake consumer</text>
+  <text x="470" y="82" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Consumer pays own compute</text>
+  <text x="470" y="96" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">to query shared data</text>
+
+  <!-- Model 2: Reader account -->
+  <line x1="100" y1="115" x2="100" y2="150" stroke="#38bdf8" stroke-width="2"/>
+  <line x1="100" y1="150" x2="260" y2="150" stroke="#38bdf8" stroke-width="2" marker-end="url(#c2)"/>
+  <rect x="265" y="123" width="180" height="55" rx="8" fill="#1e3a5f" stroke="#38bdf8" stroke-width="2"/>
+  <text x="355" y="145" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#7dd3fc">Reader Account</text>
+  <text x="355" y="161" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#bae6fd">for consumers with no Snowflake acct</text>
+  <text x="470" y="145" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Provider creates &amp; pays for</text>
+  <text x="470" y="159" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">the reader account's compute</text>
+
+  <!-- Model 3: Marketplace -->
+  <line x1="100" y1="115" x2="100" y2="215" stroke="#c4b5fd" stroke-width="2"/>
+  <line x1="100" y1="215" x2="260" y2="215" stroke="#c4b5fd" stroke-width="2" marker-end="url(#c3)"/>
+  <rect x="265" y="188" width="180" height="55" rx="8" fill="#4c1d95" stroke="#c4b5fd" stroke-width="2"/>
+  <text x="355" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ede9fe">Marketplace Listing</text>
+  <text x="355" y="226" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ddd6fe">public or private listing</text>
+  <text x="470" y="210" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">Broad discovery/distribution</text>
+  <text x="470" y="224" font-family="Arial, sans-serif" font-size="10" fill="#94a3b8">of data products</text>
+
+  <rect x="250" y="290" width="360" height="70" rx="8" fill="#3a1e1e" stroke="#fb7185" stroke-width="2" stroke-dasharray="5,3"/>
+  <text x="430" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#fecdd3">No data is physically copied</text>
+  <text x="430" y="333" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fda4af">All models grant secure read access to the provider's</text>
+  <text x="430" y="347" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#fda4af">storage layer — this is what "zero-copy" sharing means</text>
+
+  <defs>
+    <marker id="c1" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#4ade80"/></marker>
+    <marker id="c2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#38bdf8"/></marker>
+    <marker id="c3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#c4b5fd"/></marker>
+  </defs>
+</svg>
