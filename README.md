@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Exam](https://img.shields.io/badge/exam-COF--C03-29B5E8)](https://learn.snowflake.com/en/certifications/snowpro-core-c03/)
-[![Last commit](https://img.shields.io/github/last-commit/nguyenduongha2000/snowpro-core-study-guide)](https://github.com/nguyenduongha2000/snowpro-core-study-guide/commits/main)
+[![Last commit](https://img.shields.io/github/last-commit/sagameko/snowpro-core-study-guide)](https://github.com/sagameko/snowpro-core-study-guide/commits/main)
 [![Claude Skill](https://img.shields.io/badge/Claude-Skill%20included-6A5ACD)](SKILL.md)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
