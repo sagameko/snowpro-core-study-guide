@@ -76,6 +76,33 @@ D. Avro
 
 ---
 
+**9.** A data engineer wants to run a `COPY INTO` statement as part of an automated nightly shell script, with no browser involved. Which tool is the standard fit?
+
+A. Snowsight
+B. SnowSQL
+C. Partner Connect
+D. Snowflake Marketplace
+
+---
+
+**10.** A team wants to connect their Snowflake account to a third-party BI tool with a guided, one-click setup rather than manually configuring credentials and grants. Which feature is designed for this?
+
+A. Partner Connect
+B. SnowSQL
+C. Snowpipe
+D. Storage integration
+
+---
+
+**11.** How does Snowflake CLI (`snow`) differ from SnowSQL?
+
+A. They are the same tool with two different names
+B. SnowSQL is a SQL client for running statements; Snowflake CLI is oriented around managing Snowflake objects and deploying Snowpark/Streamlit applications
+C. SnowSQL only works with external stages, while Snowflake CLI only works with internal stages
+D. Snowflake CLI replaces Snowsight entirely
+
+---
+
 ## Answer Key
 
 | # | Answer | Why |
@@ -88,6 +115,9 @@ D. Avro
 | 6 | B | COPY INTO <location> is the unload command; COPY INTO <table> is for loading. |
 | 7 | B | PUT uploads local files to an internal stage; GET downloads from an internal stage to a local machine. |
 | 8 | A, D | Parquet and Avro are supported semi-structured/columnar file formats (along with CSV, JSON, ORC, and XML); DOCX is not a supported load format. |
+| 9 | B | SnowSQL is the command-line SQL client, the standard fit for running SQL statements like COPY INTO from an automated script without a browser. |
+| 10 | A | Partner Connect provides guided, one-click connection setup to partner tools directly from Snowsight, avoiding manual credential/grant configuration. |
+| 11 | B | SnowSQL is a SQL client for running statements; Snowflake CLI is a broader tool for managing Snowflake objects and deploying Snowpark/Streamlit applications. |
 
 ---
 

@@ -81,6 +81,17 @@ SnowPro Core expects awareness (not deep expertise) of how external tools connec
 - **Storage integrations**: named, account-level objects that let Snowflake securely access external cloud storage without embedding credentials directly in stage definitions.
 - **API integrations**: enable features like external functions and Snowpipe's cloud-notification-based triggering to securely call out to (or be triggered by) external cloud services.
 
+## 4.8 Interfaces and tools for interacting with Snowflake
+
+Beyond drivers/connectors (§4.7), SnowPro Core also expects you to know the tools people and teams actually use day-to-day to work *with* Snowflake itself — these come up as their own scenario questions ("which tool would you use to do X"), separate from the loading mechanics above.
+
+- **Snowsight** — Snowflake's default web-based UI: SQL worksheets, dashboards, query history/profiling, Snowflake Marketplace browsing, and cost/usage monitoring all live here. It's the interface most users interact with day-to-day and is also where Notebooks run (Chapter 8).
+- **SnowSQL** — the command-line client for connecting to Snowflake and running SQL (including `COPY INTO`, `PUT`, and `GET`) from a terminal or shell script. This is the standard answer when a scenario needs SQL executed as part of an automated script rather than interactively in a browser.
+- **Snowflake CLI** (`snow`) — a newer, broader command-line tool (distinct from SnowSQL) aimed at developer/DevOps workflows: managing Snowflake objects as code, and deploying things like Snowpark and Streamlit apps. If a question is about *running ad hoc SQL* from a script, that's SnowSQL; if it's about *deploying/managing objects* as part of a CI/CD-style workflow, that's Snowflake CLI.
+- **Partner Connect** — a feature inside Snowsight that provides one-click trial signup and pre-configured connection setup to third-party partner tools (ETL/ELT tools like Fivetran, BI tools like Tableau or Sigma, transformation tools like dbt), so a team can connect an external tool to their account without manually configuring credentials and grants from scratch.
+
+**Exam tip:** don't conflate SnowSQL with Snowflake CLI — SnowSQL is purely a SQL client for running statements against Snowflake; Snowflake CLI is oriented around managing Snowflake objects and deploying Snowpark/Streamlit applications. Both are legitimate "automation without a browser" answers, but the scenario detail (running SQL vs. deploying/managing objects) decides which one fits.
+
 ## Key takeaways
 
 - Every load/unload path goes through a stage — know the difference between user, table, named internal, and external stages.
@@ -88,6 +99,7 @@ SnowPro Core expects awareness (not deep expertise) of how external tools connec
 - Snowpipe = automated, serverless, micro-batch loading; Snowpipe Streaming = low-latency row-level ingestion without staging files.
 - PUT/GET only work with internal stages, for moving files between a local machine and Snowflake.
 - Storage integrations avoid embedding raw cloud credentials in stage objects.
+- Snowsight (web UI), SnowSQL (CLI SQL client), Snowflake CLI (dev/deployment CLI), and Partner Connect (one-click partner tool setup) are the interfaces layered on top of the loading/connectivity mechanics above.
 
 ## Official documentation for further reading
 
@@ -96,6 +108,10 @@ SnowPro Core expects awareness (not deep expertise) of how external tools connec
 - [Snowpipe Streaming overview](https://docs.snowflake.com/en/user-guide/data-load-snowpipe-streaming-overview)
 - [COPY INTO \<table\>](https://docs.snowflake.com/en/sql-reference/sql/copy-into-table)
 - [COPY INTO \<location\>](https://docs.snowflake.com/en/sql-reference/sql/copy-into-location)
+- [Snowsight overview](https://docs.snowflake.com/en/user-guide/ui-snowsight)
+- [SnowSQL overview](https://docs.snowflake.com/en/user-guide/snowsql)
+- [Snowflake CLI overview](https://docs.snowflake.com/en/developer-guide/snowflake-cli/index)
+- [Partner Connect](https://docs.snowflake.com/en/user-guide/ecosystem-partner-connect)
 
 ---
 
